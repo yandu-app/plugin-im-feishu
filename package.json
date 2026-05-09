@@ -1,0 +1,24 @@
+{
+  "name": "@yandu/plugin-im-feishu",
+  "version": "1.0.0",
+  "description": "Yandu Feishu IM plugin",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@yandu/types": "^0.0.7",
+    "axios": "^1.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
