@@ -1,5 +1,5 @@
 {
-  "name": "yandu-plugin-im-feishu",
+  "name": "@yandu/plugin-im-feishu",
   "version": "1.0.0",
   "description": "Yandu Feishu IM plugin",
   "type": "module",

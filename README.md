@@ -1,3 +1,3 @@
-# yandu-plugin-im-feishu
+# @yandu/plugin-im-feishu
 
 Yandu IM plugin.
