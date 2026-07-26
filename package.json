@@ -5,13 +5,19 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node --test test/*.test.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "prepack": "npm run test"
   },
   "dependencies": {
-    "@yandu/types": "workspace:*",
+    "@yandu/types": "0.0.7",
     "axios": "^1.7.0"
   },
   "devDependencies": {
@@ -20,5 +26,12 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "bin": {
+    "yandu-im-feishu": "./dist/worker.js"
+  },
+  "yandu": {
+    "worker": "./dist/worker.js",
+    "protocol": "jsonl-v1"
   }
 }
